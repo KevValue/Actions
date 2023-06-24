@@ -55,6 +55,7 @@ jobs:
         with:
           name: sample-artifact
       - name: echo artifiact
+        shell: bash
         run: cat sample.yml
 
         
