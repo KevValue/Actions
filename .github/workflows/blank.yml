@@ -36,7 +36,6 @@ jobs:
           echo test, and deploy your project.
   artifact:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: create the path
         run: touch sample.yml
@@ -49,7 +48,7 @@ jobs:
           path: sample.yml
   print:
     runs-on: ubuntu-latest
-    needs: build
+    needs: artifact
     steps:
       - name: download artifact
         uses: actions/download-artifact@v3
